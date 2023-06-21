@@ -76,7 +76,7 @@ export default function Home() {
           <div className="flex justify-center md:justify-normal gap-4 flex-wrap">
             {sortedSketches?.map((sketch) => {
               if (!sketch.result) {
-                return <Skeleton key={sketch._id} className="w-[256px] h-[128px]" />;
+                return <Skeleton key={`skeleton-${sketch._id}`} className="w-[256px] h-[128px]" />;
               }
               return (
                 <img
