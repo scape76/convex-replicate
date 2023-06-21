@@ -1,10 +1,10 @@
-import { defineSchema, defineTable } from "convex/server";
-import { v } from "convex/values";
+// import { defineSchema, defineTable } from "convex/server";
+// import { v } from "convex/values";
 
-export default defineSchema({
-  sketches: defineTable({
-    prompt: v.string(),
-    image: v.optional(v.string()),
-    result: v.optional(v.string()),
-  }),
-});
+// export default defineSchema({
+//   sketches: defineTable({
+//     prompt: v.string(),
+//     image: v.optional(v.string()),
+//     result: v.optional(v.string()),
+//   }),
+// });

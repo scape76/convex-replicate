@@ -41,6 +41,8 @@ export default function Home() {
           onSubmit={handleSubmit(async (formData) => {
             if (!canvasRef.current) return;
             const image = await canvasRef.current?.exportImage("jpeg");
+
+            console.log(image);
             await saveSketchMutation({ ...formData, image });
           })}
         >
@@ -79,10 +81,11 @@ export default function Home() {
                 return <Skeleton key={`skeleton-${sketch._id}`} className="w-[256px] h-[128px]" />;
               }
               return (
-                <img
+              <img
                   key={sketch._id}
                   width="256"
                   src={sketch.result}
+                  className="border border-b"
                 />
               );
             })}

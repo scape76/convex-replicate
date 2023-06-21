@@ -11,6 +11,7 @@ export const saveSketch = mutation(
       prompt,
     });
 
+
     await scheduler.runAfter(0, api.generate.generate, {
       sketchId,
       prompt,

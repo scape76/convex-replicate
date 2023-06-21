@@ -16,6 +16,8 @@ export const generate = internalAction(
   ) => {
     // TODO: implement me
 
+    console.log('here')
+
     const replicate = new Replicate({
       auth: process.env.REPLICATE_API_TOKEN!,
     });
@@ -33,6 +35,8 @@ export const generate = internalAction(
         },
       }
     )) as [string, string];
+
+    console.log('----------type----------', typeof output);
 
     await runMutation(api.sketches.updateSketchResult, {
       sketchId,
